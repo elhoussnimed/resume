@@ -1,0 +1,440 @@
+/* start general rules  */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+:root {
+  --basic-color: #1067b2;
+}
+html {
+  font-size: 10px;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+ul {
+  list-style: none;
+}
+.section {
+  display: flex;
+  padding: 2em 1em;
+}
+.tittle {
+  position: relative;
+  margin-right: 2em;
+}
+.tittle p {
+  writing-mode: tb;
+  transform: rotate(180deg);
+  position: absolute;
+  bottom: 0px;
+  left: -15px;
+  font-size: 2.5em;
+  padding-top: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  border-top: 10px solid var(--basic-color);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+}
+/* start media query  */
+@media (max-width: 767px) {
+  .container {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .tittle {
+    position: initial;
+    margin-right: 0em;
+  }
+  .tittle p {
+    position: initial;
+    writing-mode: horizontal-tb;
+    transform: initial;
+    border-top: initial;
+    border-bottom: 10px solid var(--basic-color);
+    width: fit-content;
+    margin-bottom: 1em;
+  }
+  .section {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    width: 730px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (min-width: 1199px) {
+  .container {
+    width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+/* end media query  */
+/* end general rules  */
+/* start header ------------------------------------------------------ */
+header {
+  background-color: var(--basic-color);
+}
+header .container {
+  display: flex;
+  justify-content: center;
+  height: 40em;
+}
+header .container > div {
+  width: calc(100% / 3);
+}
+header .container .name {
+  text-align: right;
+}
+header .container .name .top {
+  padding: 10em 2em 2em 0em;
+  background-color: #222;
+  margin-left: 20em;
+  margin-bottom: 1em;
+}
+header .container .name .top p:nth-child(1) {
+  font-size: 5em;
+  font-weight: 800;
+  text-transform: capitalize;
+  color: var(--basic-color);
+}
+header .container .name .top p:nth-child(2) {
+  font-size: 5em;
+  font-weight: 800;
+  text-transform: capitalize;
+  color: white;
+  line-height: 0.5;
+}
+header .container .name > p {
+  font-size: 2.2em;
+  margin-right: 0.3em;
+  text-transform: capitalize;
+  color: white;
+}
+header .container .picture img {
+  width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+header .container .contact-infos {
+  padding-block: 10em;
+}
+header .container .contact-infos .parent {
+  display: grid;
+  margin-bottom: 15px;
+  grid-template-columns: 60px 1fr;
+}
+header .container .contact-infos .parent .icon {
+  background-color: white;
+  padding: 5px 10px 5px 20px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-right: 10px;
+}
+header .container .contact-infos .parent .icon i {
+  font-size: 2em;
+}
+header .container .contact-infos .parent .infos p {
+  color: white;
+  font-size: 1.2em;
+  font-weight: 600;
+  margin-bottom: 2px;
+  text-transform: capitalize;
+}
+header .container .contact-infos .parent .infos a {
+  color: white;
+  font-weight: 500;
+  font-size: 1.2em;
+}
+header .container .contact-infos .address .icon {
+  height: 30.3px;
+}
+header .container .contact-infos .address .infos p:not(:first-child) {
+  font-weight: 500;
+}
+@media (max-width: 767px) {
+  header .container {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+  header .container > div {
+    width: 100%;
+  }
+  header .container .name {
+    text-align: center;
+  }
+  header .container .name .top {
+    margin-left: 0em;
+    padding: 1em 1em 2em 1em;
+  }
+  header .container .name .top p {
+    display: inline-block;
+  }
+  header .container .name > p {
+    margin: 0em 0em 0.5em;
+  }
+  header .container .contact-infos {
+    padding-block: 1em;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  header .container {
+    height: auto;
+  }
+  header .container .name {
+    text-align: left;
+  }
+  header .container .name .top {
+    margin-left: 0em;
+  }
+  header .container .contact-infos {
+    padding-block: 3em;
+  }
+}
+/* end header ------------------------------------------------------ */
+/* start resume ----------------------------------------------------- */
+.resume .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr;
+  grid-gap: 3em;
+}
+.resume .container .who-am .content .top {
+  margin-bottom: 4em;
+}
+.resume .container .who-am .content .top p {
+  font-size: 1.2em;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding-inline: 1em;
+}
+.resume .container .who-am .content .bottom {
+  display: flex;
+  justify-content: center;
+}
+.resume .container .who-am .content .bottom .wrapper {
+  margin-right: 3em;
+}
+.resume .container .who-am .content .bottom .wrapper .logo {
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 1em;
+}
+.resume .container .who-am .content .bottom .wrapper .logo img {
+  width: 5em;
+}
+@media (max-width: 767px) {
+  .resume .container {
+    grid-template-columns: 1fr;
+  }
+  .resume .container .who-am .content .bottom .wrapper {
+    margin-right: 1em;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .resume .container {
+    grid-template-columns: 1fr;
+  }
+}
+/* end resume ----------------------------------------------------- */
+/* start expert ------------------------------------------------------ */
+.resume .container .expert .content p {
+  font-size: 1.2em;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding-inline: 1em;
+  margin-bottom: 1em;
+}
+.resume .container .expert .content .progress {
+  padding-inline: 1em;
+}
+.resume .container .expert .content .progress .parent {
+  margin-bottom: 1em;
+}
+.resume .container .expert .content .progress .parent h3 {
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 1.3em;
+  margin-bottom: 0.2em;
+}
+.resume .container .expert .content .progress .parent .bar {
+  position: relative;
+  height: 10px;
+  background-color: #ddd;
+  width: 80%;
+}
+.resume .container .expert .content .progress .parent .bar::before {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 100%;
+  background-color: black;
+  top: 0%;
+  left: 0%;
+}
+.resume .container .expert .content .progress .parent .bar::after {
+  position: absolute;
+  content: attr(data-num);
+  background-color: var(--basic-color);
+  color: white;
+  top: -200%;
+  left: 56%;
+  padding: 3px;
+}
+.resume
+  .container
+  .expert
+  .content
+  .progress
+  .parent:nth-child(2)
+  .bar::before {
+  width: 90%;
+}
+.resume
+  .container
+  .expert
+  .content
+  .progress
+  .parent:nth-child(3)
+  .bar::before {
+  width: 70%;
+}
+.resume
+  .container
+  .expert
+  .content
+  .progress
+  .parent:nth-child(4)
+  .bar::before {
+  width: 80%;
+}
+.resume .container .expert .content .progress .parent:nth-child(2) .bar::after {
+  left: 85%;
+}
+.resume .container .expert .content .progress .parent:nth-child(3) .bar::after {
+  left: 65%;
+}
+.resume .container .expert .content .progress .parent:nth-child(4) .bar::after {
+  left: 75%;
+}
+/* end expert ------------------------------------------------------ */
+/* start education and experience ------------------------------------------------- */
+.resume .container .education.experience .content {
+  padding-inline: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.resume .container .education.experience .content .parent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5em;
+}
+.resume .container .education.experience .content .parent .right {
+  width: 30%;
+  text-align: center;
+}
+.resume
+  .container
+  .education.experience
+  .content
+  .parent
+  .right
+  p:nth-child(1) {
+  font-size: 1.2em;
+  margin-bottom: 2px;
+}
+.resume
+  .container
+  .education.experience
+  .content
+  .parent
+  .right
+  p:nth-child(2) {
+  text-transform: uppercase;
+  font-size: 1.3em;
+  font-weight: 800;
+}
+.resume .container .education.experience .content .parent .left h3 {
+  font-size: 1.4em;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+.resume .container .education.experience .content .parent .left p {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+@media (max-width: 767px) {
+  .resume .container .education.experience .content .parent {
+    gap: 1em;
+  }
+}
+/* end education and experience ------------------------------------------------- */
+/* start awards ------------------------------------------------------------------ */
+.resume .container .awards .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-inline: 1em;
+}
+.resume .container .awards .content .parent {
+  margin-bottom: 2em;
+}
+.resume .container .awards .content .parent h3 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.3em;
+  font-weight: 800;
+  margin-bottom: 0.5em;
+}
+.resume .container .awards .content .parent p {
+  font-size: 1.1em;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+/* end awards ------------------------------------------------------------------ */
+/* start interests ------------------------------------------------------------- */
+.resume .container .interests .content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.resume .container .interests .content .parent {
+  width: 33%;
+  text-align: center;
+}
+.resume .container .interests .content .parent i {
+  font-size: 3.5em;
+  color: var(--basic-color);
+  margin-bottom: 10px;
+}
+.resume .container .interests .content .parent p {
+  font-size: 1.5em;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+/* end interests ------------------------------------------------------------- */
